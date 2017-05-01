@@ -61,6 +61,16 @@
                             <li role="presentation"><a href="patientdata.xhtml">Patientendaten abrufen</a></li>
                         </c:otherwise>
                     </c:choose>
+                    <c:choose>
+                        <c:when test="${request.requestURI.endsWith('fever.xhtml')}">
+                            <li  role="presentation" class="active">
+                                <a href="./fever.xhtml">Temperaturrechner</a>
+                            </li>
+                        </c:when>
+                        <c:otherwise>
+                            <li role="presentation"><a href="fever.xhtml">Temperaturrechner</a></li>
+                        </c:otherwise>
+                    </c:choose>
                         <li role="presentation" id="listElement4"><a href="mailto:patientenverwaltung@technikum.at" id="contact">Kontakt</a></li>
     
                 </ul>
@@ -72,7 +82,7 @@
                 </div>
                 <div class="col-md-5" id="rightSection">
                     <div id="formContainerRight">
-                        <ui:insert name="content">Right Section</ui:insert>
+                        <ui:insert name="content"></ui:insert>
                     </div>
                 </div>
             </main>
