@@ -1,5 +1,7 @@
 package model;
 
+import rest.ApiCaller;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.inject.Named;
@@ -17,6 +19,11 @@ public class Fever {
     public void callWebServiceClient(){
         //calls webserviceclient
         //celsius =;
+    }
+
+    public void convertToCelsius(){
+        /*ApiCaller apiCaller = new ApiCaller();
+        return (apiCaller.sendAsJson(this));*/
     }
 
     public float getCelsius() {

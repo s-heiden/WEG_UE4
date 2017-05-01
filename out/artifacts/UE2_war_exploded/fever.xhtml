@@ -24,8 +24,9 @@
                 <h:inputText id="fahrenheit" value="#{fever.fahrenheit}" type="number">
                     <f:validateDoubleRange></f:validateDoubleRange>
                 </h:inputText>
-
                 <h:message class="errors" for="fahrenheit"/>
+                <h:commandButton value="Temperatur umrechnen"
+                                 action="#{fever.convertToCelsius}"></h:commandButton>
             </td>
         </tr>
         </tbody>
