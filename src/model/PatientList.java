@@ -1,9 +1,6 @@
 package model;
 
-import org.primefaces.model.chart.AxisType;
-import org.primefaces.model.chart.CategoryAxis;
-import org.primefaces.model.chart.LineChartModel;
-import org.primefaces.model.chart.LineChartSeries;
+import org.primefaces.model.chart.*;
 import rest.ApiCaller;
 
 import javax.faces.bean.ManagedBean;
@@ -39,6 +36,7 @@ public class PatientList {
         patientModel.getAxes().get(AxisType.Y).setLabel("Values");
         patientModel.getAxes().get(AxisType.Y).setMin(0);
         patientModel.getAxes().get(AxisType.Y).setMax(800);
+        patientModel.setLegendPlacement(LegendPlacement.OUTSIDE);
 
         for (Patient p : patients) {
             LineChartSeries patientSeries = new LineChartSeries();
@@ -49,7 +47,6 @@ public class PatientList {
             patientSeries.set("Blood Sys", p.getSystolicPressure());
             patientModel.addSeries(patientSeries);
         }
-
     }
 
     public List<Patient> getPatients() {
