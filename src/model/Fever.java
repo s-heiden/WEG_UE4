@@ -13,32 +13,27 @@ import javax.inject.Named;
 @RequestScoped
 public class Fever {
 
-    private float celsius;
-    private float fahrenheit;
+    private double celsius;
+    private double fahrenheit;
 
     public void callWebServiceClient(){
-        //calls webserviceclient
-        //celsius =;
+        // calls webserviceclient
+        celsius = utility.SoapCaller.getCelsius(fahrenheit);
     }
 
-    public void convertToCelsius(){
-        /*ApiCaller apiCaller = new ApiCaller();
-        return (apiCaller.sendAsJson(this));*/
-    }
-
-    public float getCelsius() {
+    public double getCelsius() {
         return celsius;
     }
 
-    public void setCelsius(float celsius) {
+    public void setCelsius(double celsius) {
         this.celsius = celsius;
     }
 
-    public float getFahrenheit() {
+    public double getFahrenheit() {
         return fahrenheit;
     }
 
-    public void setFahrenheit(float fahrenheit) {
+    public void setFahrenheit(double fahrenheit) {
         this.fahrenheit = fahrenheit;
     }
 
