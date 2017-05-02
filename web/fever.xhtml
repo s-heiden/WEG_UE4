@@ -13,25 +13,41 @@
     <h:outputStylesheet library="css" name="styles.css"/>
 </h:head>
 <ui:composition template="./template.xhtml">
-<ui:define name="contentLeft">
-<f:view>
-    <h:form>
-        <table class="table table-striped">
-        <tbody>
-        <tr>
-            <td><label for="fahrenheit">In Fahrenheit eingeben:</label></td>
-            <td>
-                <h:inputText id="fahrenheit" value="#{fever.fahrenheit}" type="number">
-                    <f:validateDoubleRange></f:validateDoubleRange>
-                </h:inputText>
+    <ui:define name="contentLeft">
+        <f:view>
+            <h:form>
+                <table class="table table-striped">
+                    <tbody>
+                    <tr>
+                        <td><label for="fahrenheit">In Fahrenheit eingeben:</label></td>
+                        <td>
+                            <h:inputText id="fahrenheit" value="#{fever.fahrenheit}" type="number">
+                                <f:validateDoubleRange></f:validateDoubleRange>
+                            </h:inputText>
 
-                <h:message class="errors" for="fahrenheit"/>
-            </td>
-        </tr>
-        </tbody>
-        </table>
-    </h:form>
-</f:view>
-</ui:define>
+                            <h:message class="errors" for="fahrenheit"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="returnValue">Umrechnung in Celsius:</label></td>
+                        <td>
+                            <h:inputText id="returnValue" value="#{fever.celsius}" type="number" disabled="true">
+                                <f:validateDoubleRange></f:validateDoubleRange>
+                            </h:inputText>
+
+                            <h:message class="errors" for="fahrenheit"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <h:commandButton class="btn btn-default" type="submit" value="Senden"
+                                             action="#{fever.callWebServiceClient}"/>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </h:form>
+        </f:view>
+    </ui:define>
 </ui:composition>
 </html>
