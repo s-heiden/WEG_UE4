@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="UE4">
+    <output-path>$PROJECT_DIR$/out/artifacts/UE4</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="UE4/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="UE4" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="primefaces-6.1" />
+          <element id="library" level="project" name="JAX-WS-Glassfish / JAX-WS 2.2 RI / Metro 1.X / JWSDP 2.2" />
+          <element id="library" level="project" name="javax.json:javax.json-api:1.1.0-M1" />
+          <element id="library" level="project" name="jersey-client" />
+          <element id="library" level="project" name="javax.ws.rs-api-2.0.1" />
+          <element id="library" level="project" name="Java EE 6-Java EE 6" />
+        </element>
+      </element>
+      <element id="library" level="project" name="primefaces-6.1" />
+    </root>
+  </artifact>
+</component>
